@@ -1,0 +1,52 @@
+nav
+	#menu
+		h1
+			a(href="index.php")
+				img(src="images/logo.png" title="logo")
+		ul
+			li.active
+				a(href="main.php") 首頁
+			li
+				a(href="activity.php") 活動辦法
+			li
+				a(href="sn.php") 發票登錄
+			li
+				a(href="search.php") 點數查詢
+			li
+				a(href="redeem.php") 獎品兌換
+			li
+				a(href="https://tsuntory.show.bis.tw/Alcohol/kakubin/index.asp") 角瓶官網
+#menu_mobile
+	#mobile_controlboxArea
+		#mobile_menu_labIcon
+			#hamburger-1.hamburger
+				span.line
+				span.line
+				span.line
+		#mobile_menu_logo
+			a(href="main.php")
+				img(src="images/logo.png" title="logo")
+	#mobile_menulist
+		.mobileMenu_list
+			ul
+				li.active
+					a(href="main.php") 首頁
+				li
+					a(href="activity.php") 活動辦法
+				li
+					a(href="sn.php") 發票登錄
+				li
+					a(href="search.php") 點數查詢
+				li
+					a(href="redeem.php") 獎品兌換
+				li
+					a(href="https://tsuntory.show.bis.tw/Alcohol/kakubin/index.asp") 角瓶官網
+script.
+	$(".hamburger").click(function(){
+		$(this).toggleClass('is-active');
+			if($(this).hasClass("is-active")){
+				$("#mobile_menulist").stop().animate({top:"60px"},300);
+			}else{
+				$("#mobile_menulist").stop().animate({top:"-100%"},300);
+		}
+	});
